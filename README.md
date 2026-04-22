@@ -1,28 +1,25 @@
-# CSCI E-31: Vue PhotoGallery Demo (Mock Data)
+# CSCI E-31: Vue PhotoGallery Demo 
+
+This project is baed ont he Week11-inclass repo, and builds towards the end state of week 12. 
 
 This is a **small Vue 3 + TypeScript demo app** for CSCI E-31. **It mirrors the end state of the Express Photo Gallery Vue App as of the end of class meeting 11.** 
 
 It renders a photo gallery using **mock data** (no backend calls in this version), and is meant to support early Vue learning goals. It handles the RUD of CRUD (Create, Read, Update, Delete) with a simple local data service, but does not include file upload or any real persistence.
 
-## What this project adds to the Week 10 example:
+## What this project adds to the Week 11 example:
 
-- Send information from child components back to parents with typed custom events
-	- Use `defineEmits` in a child and handle the emitted event in the parent
-- Add client-side routing with Vue Router for gallery, detail, and edit views
-	- Use `RouterLink` for visible navigation and `router.push()` after actions
-- Use route params plus `watch()` and `computed()` to keep detail/edit views in sync with the URL
-- Build simple form-based editing with `v-model` and `@submit.prevent`
-- Connect basic CRUD-style UI flows to a simple local data service
-	- Load one photo, update title/description, and delete a photo before returning to the gallery
+Complete the transitio from mock data to the Express REST API, including:
+- Replace the local data service with API calls to the Express backend
+	- Use `fetch()` to make HTTP requests to the backend API routes
+	- Handle asynchronous calls with `async/await` and error handling
+- Update the UI to reflect changes from API responses
+	- Load the gallery with photos from the backend
+	- Update detail/edit views with data from the backend
+	- Handle UI updates after create/update/delete actions
+- Handle form input and submission with API calls
+	- Use `v-model` for form inputs and submit handlers to send file data to the backend
+	- Update the UI based on success or error responses from the backend
 
-### Goals from the Week 10 project
-
-- Component structure and nesting
-- Passing data down with props
-- TypeScript in Vue SFCs (`<script setup lang="ts">`)
-- Type checking during development/build
-- Practical UI basics
-- Layouts using `<slot />`
 
 ## Install and run
 
